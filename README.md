@@ -1,3 +1,6 @@
 1. html_fast
 2. responsive_web
+    - https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Responsive_Design
+    - https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries
 3. html_basic
+    - https://developer.mozilla.org/ko/docs/Web/HTML/Element
