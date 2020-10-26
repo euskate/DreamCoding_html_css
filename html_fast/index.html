@@ -1,0 +1,66 @@
+<!-- ! -> tab -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>div -> tab</div>
+    <div class="class">div.class -> tab</div>
+    <div class="class">.class -> tab</div>
+    <div id="id">div#id -> tab</div>
+    <div id="id">#id -> tab</div>
+    <div>
+        <ul>
+            <li>div>ul>li</li>
+        </ul>
+    </div>
+    <div>
+        <ul>div>ul+ol</ul>
+        <ol></ol>
+    </div>
+    <ul>
+        <li>ul>li*5 -> tab</li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+    <div>
+        <ul>
+            <li>div>ul>li^ol -> tab ^는 바로 부모요소의 형제요소로 만든다</li>
+        </ul>
+        <ol></ol>
+    </div>    
+
+    <div>
+        <header>
+            <ul>
+                <li><a href="">div>header>ul>li*2>a^^^footer>p</a></li>
+                <li><a href="">div>(header>ul>li*2>a)+footer>p</a></li>
+            </ul>
+        </header>
+        <footer>
+            <p></p>
+        </footer>
+    </div>
+    <!-- text 입력하기  -->
+    <!-- p{hello} -> tab -->
+    <p>hello</p> 
+    <!-- p.class${item $}*5 -->
+    <p class="class1">item 1</p>
+    <p class="class2">item 2</p>
+    <p class="class3">item 3</p>
+    <p class="class4">item 4</p>
+    <p class="class5">item 5</p>
+    <!-- p>lorem -> tab -->
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium doloribus porro culpa eos debitis, corporis eum sunt optio labore laboriosam molestiae est provident in illum atque incidunt laudantium voluptates odit.</p>
+    <!-- p>lorem4 -> tab  4개의 단어 입력 -->
+    <p>Lorem ipsum dolor sit.</p>
+    
+
+</body>
+</html>
