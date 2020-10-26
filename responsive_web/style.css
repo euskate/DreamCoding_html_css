@@ -1,0 +1,7 @@
+@media screen and (min-width:800px) {
+    .container {
+        width:50%;
+    }
+}
+/* https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Responsive_Design */
+/* https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries */
