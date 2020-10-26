@@ -1,0 +1,68 @@
+* {
+    color:green;
+  }
+  
+  li {
+    color:blue;
+  }
+  
+  /* 가까운데 있을 수록 우선순위가 높아진다 */
+  #special { 
+    color : pink;
+  }
+  
+  /* id=special인 것들 중에 h1만 */
+  h1#special { 
+    color : grey;
+  }
+  
+  /* 적용이 안되는 이유는 div가 텅텅 비어있는 empty box이기 때문이지 */
+  .yellow {
+    background : yellow;
+  }
+  
+  /* background color를 하려면 너비가 필요하다 */
+  .red {
+    width : 100px;
+    height : 100px;
+    background : red;
+  }
+  
+  /* hover */
+  button:hover{
+    color : red;
+    background: beige;
+  }
+  
+  /* 속성값도 사용가능 */
+  a[href] {
+    color : purple;
+  }
+  
+  /* a태그에 href=naver.com을 갖는 애만 해당 */
+  a[href="naver.com"] {
+    color : orange;
+  }
+  
+  /* nate로 시작하는 것만 해당 */
+  a[href^="nate"] {
+    color : brown;
+  }
+  
+  /* .net으로 끝나는 것만 해당 */
+  a[href$=".net"] {
+    color : yellowgreen;
+  }
+  
+  
+  /* box1 box2 */
+  
+  /*  */
+  .box1 {
+    width : 100px;
+    height : 100px;
+    background : yellow;
+    padding :20px; /* padding은 컨텐츠 안 */
+    margin : 20px; /* magin 은 컨텐츠 밖 */
+    border : 2px pink dashed; /* 한꺼번에 입력 */
+  }
