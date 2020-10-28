@@ -1,0 +1,23 @@
+/* span은 내용이 있어야먄 표기된다 */
+div, span {
+    width : 80px;
+    height : 80px;
+    margin : 20px;
+  }
+  
+  div {
+    background : red;
+    display : inline-block; /* 한 줄에 여러 개.
+    컨텐츠 크기 상관없이 지정한 박스 width, height에 맞추어서
+    표시*/
+  }
+  
+  div.inline{
+    display : inline; /* 표시되지 않는다. 
+    컨텐츠 자체만 꾸며주는 것. width, height 무시 */
+  }
+  
+  span {
+    background : pink;
+    display : block; /* 한 줄에 하나 */
+  }

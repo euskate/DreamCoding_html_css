@@ -1,0 +1,42 @@
+div {
+    width : 50px;
+    height : 50px;
+    margin-bottom : 20px;
+    background : red;
+  }
+  
+  .container {
+    background : yellow;
+    position : relative; /* display를 바꿔줘야한다 */
+    left : 20px; /* 디폴트 값이 position : static;이기 때문에 움직이지 않는다 */
+    top : 20px; /* 디폴트 값이 position : static;이기 때문에 움직이지 않는다 */
+  }
+  
+  .box1 {
+    background : pink;
+    position : relative; /* 원래 있어야 하는 자리 기준 이탈 */
+    left : 20px;
+    top: 20px;
+  }
+  
+  .box2 {
+    background : green;
+    position : absolute; /* 내 아이템과 가장 가까이에 있는 박스(여기선 artible) 안에서 위치 변경 */
+    left : 20px;
+    top : 20px;
+  }
+  
+  .box3 {
+    background : orange;
+    position : fixed; /* 상자에서 벗어나서 윈도우 기준 */
+    left : 20px;
+    top : 20px;
+  }
+  
+  .box4 {
+    background : skyblue;
+    position : sticky; /* 원래 위치에 있으면서 스크롤되어도 없어지지 않고 그 자리에 그대로 붙어있음 */
+    left : 20px;
+    top : 20px;
+  }
+  
