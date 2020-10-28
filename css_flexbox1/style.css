@@ -1,0 +1,91 @@
+/* 
+container {
+  display :
+  flex-direction :
+  flex-wrap :
+  flex-flow :
+  justify-content :
+  align-itmes :
+  align-content :
+}
+
+item {
+  order :
+  flex-grow :
+  flex-shrink :
+  flex :
+  align-self :
+}
+
+main axis 
+(아이템들이 가로로 나열되어 있으면 가로가 main축)
+(아이템들이 세로로 나열되어 있으면 세로가 main축)
+cross axis
+*/
+
+
+/* .container에 height:100%를 쓰기 위한 과정
+
+body, html { body의 부모인 html이 100%가 아니어서 html도 같이 써주어야 한다
+  height : 100%;
+}
+*/
+
+/* 부모에 상관없이 쓰겠다. vh(view height) */
+.container {
+    background :beige;
+    height : 100vh;
+    /* height : 100%; */
+    /* height이 사라짐. 아이템에 맞게 설정됨. %는 부모에 맞게 100%채워짐 */
+    display : flex;  /* 나 flex박스 쓸거야! */
+    flex-direction : row;
+    flex-wrap : wrap;
+  /*   flex-flow : cloumn nowrap; 한 번에 쓰는 과정*/
+    justify-content : flex-end; /* 순서는 유지 & main axis
+    center 가운데, 
+    space-around 1번의 오른쪽 여백 + 2번의 왼쪽 여백이 만나 spacing이 조금 더 큼 
+    space-evenly 똑같은 간격
+    space-between 맨 왼쪽과 맨 오른쪽에 아이템들이 여백없이 오도록 하고, 그걸 기준으로 배열*/
+    
+    align-items : baseline;
+    align-content : space-between; /* 위 아래는 딱 붙어있고 배열 */
+    
+      
+  }
+  
+  .item {  /* div는 한 줄에 하나씩 */
+    width : 40px;
+    height : 40px;
+  }
+  
+  .item1 {
+    background : #ef9a9a;
+    padding : 20px;
+  }
+  .item2 {
+    background : #f48fb1;
+  }
+  .item3 {
+    background : #ce93d8;
+  }
+  .item4 {
+    background : #b39dd8;
+  }
+  .item5 {
+    background : #90caf9;
+  }
+  .item6 {
+    background : #a5d6a7;
+  }
+  .item7 {
+    background : #e6ee9c;
+  }
+  .item8 {
+    background : yellow;
+  }
+  .item9 {
+    background : yellowgreen;
+  }
+  .item10 {
+    background : orange;
+  }

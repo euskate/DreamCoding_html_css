@@ -1,0 +1,70 @@
+/* 
+container {
+  display :
+  flex-direction :
+  flex-wrap :
+  flex-flow :
+  justify-content :
+  align-itmes :
+  align-content :
+}
+
+item {
+  order :
+  flex-grow :
+  flex-shrink :
+  flex :
+  align-self :
+}
+
+main axis 
+(아이템들이 가로로 나열되어 있으면 가로가 main축)
+(아이템들이 세로로 나열되어 있으면 세로가 main축)
+cross axis
+*/
+
+
+.container {
+    padding-top : 100px;
+    background :beige;
+    height : 100vh;
+    display : flex;  /* flexbox야! */
+  }
+  
+  .item {  /* div는 한 줄에 하나씩 */
+    width : 40px;
+    height : 40px;
+  }
+  
+  .item1 {
+    background : #ef9a9a;
+    order : 2;
+    flex-grow : 2; /* 컨테이너를 꽉 차 채우게되고 커졌을 때의 반응 */
+    flex-shrink : 2; /* 컨테이너가 점점 작아졌을 때의 반응 */
+  }
+  .item2 {
+    background : #f48fb1;
+    order : 3;
+    flex-grow : 1;
+    flex-shrink : 1; 
+    /* grow만 썼을 때는 컨테이너를 꽉 채우게 되는데 shrink는 작아졌을 때의 반응이라 꽉 안채워짐 */
+  }
+  .item3 {
+    background : #ce93d8;
+    order : 1;
+    flex-grow : 1;
+    flex-shrink : 1;
+  }
+  .item4 {
+    background : #b39dd8;
+    flex-basis : 60%; /* container의 width에 따라서 비율을 유지함 */
+  }
+  .item5 {
+    background : #90caf9;
+    flex-basis : 30%;
+  }
+  .item6 {
+    background : #a5d6a7;
+    flex-basis : 10%;
+  }
+  
