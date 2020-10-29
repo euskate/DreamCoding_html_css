@@ -1,0 +1,254 @@
+:root {
+    --white-color: #fff;
+    --black-color: #140a00;
+    --blue-color: #045fd4;
+    --red-color: #ff0000;
+    --grey-dark-color: #909090;
+    --grey-light-color:#e0c0e0;
+
+    --padding:12px;
+    --avatar-size:36px;
+
+    --font-large:18px;
+    --font-medium:14px;
+    --font-small:12px;
+    --font-micro:10px;
+}
+
+* {
+    padding:0;
+    margin:0;
+    box-sizing:border-box;
+}
+
+body {
+    /* margin:0px; */
+    font-family: 'Roboto', sans-serif;
+}
+
+ul {
+    list-style-type: none;
+}
+
+button,
+button:focus {
+    border: none;
+    cursor : pointer;
+    outline: none; /* 클릭 시 outline */
+    background-color: var(--white-color);
+}
+
+/* header */
+
+header {
+    display:flex;
+    justify-content: space-between;
+    /* background-color: black; */
+    background-color: var(--black-color);
+    /* padding:10px; */
+    padding:var(--padding);
+    color:var(--white-color);
+}
+
+header .navbar__title {
+    /* display:flex; */
+    font-size: var(--font-large);
+}
+
+
+/* .navbar__title span{
+    margin:0px; 전체 margin0으로 설정
+    color:white; 변수로 설정
+} */
+
+header .navbar__title i {
+    /* font-size: 24px; */
+    /* margin:0px 5px; */
+    color:var(--red-color);
+}
+
+header .navbar__icons .fa-search {
+    /* margin:0px 5px; */
+    margin-right:var(--padding);
+    /* color:white; */
+}
+
+/* video */
+
+.player {
+    /* sticky쓰려면 어디에 sticky..? top에 sticky!! */
+    position : sticky;
+    top:0; 
+    text-align: center;
+    background-color: var(--black-color);
+}
+
+.player video {
+   width : 100%;
+   height : 100%; 
+   max-width : 1000px;
+}
+
+/* detail */
+
+.detail {
+    /* padding:10px; */
+    padding:var(--padding);
+}
+
+.detail .metadata .hashtags {
+    display:flex;
+    font-size: var(--font-small);
+    color: var(--blue-color);
+}
+
+.detail .metadata .hastags li {
+    margin-right:var(--padding);
+}
+
+.detail .metadata .titleBtn{
+    display : flex;
+}
+
+.detail .metadata .titleBtn .title {
+    font-size: --var(--font-medium);
+    margin-right: var(--padding);
+}
+
+.detail .metadata .titleBtn .title.clamp {
+    /* css line clamp */
+    /* https://developer.mozilla.org/ko/docs/Web/CSS/-webkit-line-clamp */
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+}
+
+.detail .metadata .titleBtn .moreBtn {
+    height:100%;  /* 제일 위로 배치 */
+    transition: transform 380ms ease-in-out;
+}
+
+.detail .metadata .titleBtn .moreBtn.clicked {
+    transform: rotate(180deg);
+}
+
+.detail .metadata .views {
+    font-size: var(--font-small);
+    color:var(--grey-dark-color);
+}
+
+.detail .actions {
+    display:flex;
+    justify-content: space-around;
+    margin: var(--padding);
+}
+
+.detail .actions button {
+    display: flex;
+    flex-direction: column;
+    font-size: var(--font-small);  
+}
+
+.detail .actions button i {
+    margin: 0 auto;
+    margin-bottom: calc(var(--padding)/2);
+    font-size: 16px;
+    color:var(--grey-dark-color);
+}
+
+.detail .actions button i.active{
+    color:var(--blue-color);
+}
+
+.detail .channel {
+    display:flex;
+    justify-content: space-between;
+    border-top : 1px solid var(--grey-light-color);
+    border-bottom : 1px solid var(--grey-light-color);
+}
+
+.detail .channel .imgChannel{
+    display:flex;
+    align-items: center;
+}
+
+.detail .channel .imgChannel img {
+    width : var(--avatar-size);
+    height : var(--avatar-size);
+    border-radius: 50%;
+}
+
+.detail .channel .imgChannel .info {
+    display:flex;
+    flex-direction: column;
+}
+
+.detail .channel .imgChannel .info .name {
+    font-size:var(--font-medium);
+}
+
+.detail .channel .imgChannel .info .subscribers {
+    font-size:var(--font-small);
+    color: var(--grey-dark-color);
+}
+
+.detail .channel .subscribe {
+    text-transform: uppercase;
+    color: var(--red-color);
+    font-size: var(--font-medium);
+}
+
+.UpNext {
+    padding : 0 var(--padding);
+}
+
+/* UpNext의 바로 밑 자식인 title에만 적용 > 자식노드사용 */
+.UpNext > .title {
+    font-size: var(--font-medium);
+    color: var(--grey-dark-color);
+    margin-bottom: calc(var(--padding)/2);
+}
+
+.UpNext .item {
+    display:flex;
+    margin-top:var(--padding);
+}
+
+.UpNext .item .img{
+    flex:1 1 35%;
+    margin-right:var(--padding);
+}
+
+.UpNext .item .img img{
+    width:100%;
+}
+
+.UpNext .item .info{
+    flex:1 1 60%;
+    display:flex;
+    flex-direction: column;
+}
+
+.UpNext .item .moreBtn{
+    flex:1 1 5%;
+    height:100%;
+}
+
+.UpNext .item .info .channelName,
+.UpNext .item .info .views {
+    font-size:var(--font-medium);
+    color:var(--grey-dark-color);
+}
+
+.detailAndUpNext {
+    display:flex;
+    flex-direction:column;
+}
+
+@media screen and (min-width:768px) {
+    .detailAndUpNext {
+        flex-direction: row;
+        margin:var(--padding) 0;
+    }
+}

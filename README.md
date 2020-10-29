@@ -23,3 +23,5 @@
     - https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox
 9. responsive_header
     - https://fontawesome.com/
+10. youtube
+    - https://developer.mozilla.org/ko/docs/Web/CSS/-webkit-line-clamp
