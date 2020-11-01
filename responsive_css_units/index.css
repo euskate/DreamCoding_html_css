@@ -1,0 +1,97 @@
+box /* selector */ { 
+    width /* property */ : 200px; /* values */
+}
+
+html {
+    font-size : 100%;
+}
+
+.box_em {
+    border : solid 1px;
+    padding : 5px;
+    margin : 5px;
+}
+
+.box_rem {
+    border : solid 1px;
+    padding : 5px;
+    margin : 5px;
+}
+
+/* em vs rem */
+
+.parent_em {
+    font-size: 8em;
+    /* font-size: 800% */
+    /* 16px*8=128px */
+}
+
+.child_em {
+    font-size: 0.5em;
+    /* font-size: 50% */
+    /* 128px*0.5=64px */
+}
+
+.parent_rem {
+    font-size: 8rem;
+    /* 16px*8=128px */
+}
+
+.child_rem {
+    font-size: 0.5rem;
+    /* 16px*0.5=8px */
+}
+
+.parent_vw {
+    font-size: 8em;
+    /* 16px*8=128px */
+    width : 500px;
+}
+
+.child_vw {
+    font-size: 0.5em;
+    /* 16px*0.5=8px */
+    width : 50vw; /* 부모요소는 상관없이 브라우저 넓이의 50% */
+    background-color: burlywood;
+}
+
+.child_percent {
+    font-size: 0.5em;
+    /* 16px*0.5=8px */
+    width : 50%; /* 부모요소의 50% */
+    background-color: burlywood;
+}
+
+h1 {
+    display: inline-block;
+    font-size: 5em;
+    background-color: mediumaquamarine;;
+    /* padding : 10px; */
+    padding: 1em;
+    /* font-size바뀔 때 마다 padding도 변경 */
+}
+
+.component {
+    width: 50%;
+    /* em과 rem도 부모 or 브라우저에 비례하는 것이므로 결국 고정적인 값이다.
+    따라서 % 사용하는 것이 좋음 */
+    border: 1px solid burlywood;
+    font-size: 2rem;
+}
+
+.title {
+    padding: 0.5em 0.5rem;
+    /* 폰트사이즈에 관계없이 일정한 padding은 rem을 쓴다 */
+    background-color: burlywood;
+}
+
+.contents {
+    font-size: 1rem;
+    padding: 0.5em 0.5rem;
+}
+
+@media screen and (max-width: 780px) {
+    .component {
+        font-size: 1.5rem;
+    }
+}

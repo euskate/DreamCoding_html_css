@@ -1,0 +1,45 @@
+h1 {
+    /* font-size: 28px; */
+    font-size: 1.75rem;
+    /* 왜 12px이 기본값이지..? 일단 16px기준으로 진행 */
+    color: burlywood;
+    margin: auto;
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    /* padding: 32px; */
+    padding: 2em;
+}
+
+.component {
+    border: 1px solid burlywood;
+    /* margin: 16px; */
+    margin: 1em;
+}
+
+.title {
+    /* font-size: 24px; */
+    font-size: 1.5rem;
+    /* padding: 16px; */
+    padding: 1em;
+    /* padding은 em사용 -> font사이즈에 따라서 padding도 변경되면 좋으니까!
+    font는 rem사용 ->  */
+    background-color: burlywood;
+}
+
+.contents {
+    /* font-size: 18px; */
+    font-size: 1.125rem;
+    /* padding: 16px; */
+    padding: 1em;
+}
+
+/* @media screen and (max-width: 768px) { */
+@media screen and (max-width: 60rem) {
+
+    .container {
+        flex-direction: column;
+    }
+}

@@ -25,3 +25,23 @@
     - https://fontawesome.com/
 10. youtube
     - https://developer.mozilla.org/ko/docs/Web/CSS/-webkit-line-clamp
+11. responsive_css_units
+    - https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Values_and_units
+    - http://pxtoem.com/
+    
+    ### absolute unit
+    - px 
+
+    ### relative unit
+    - %
+    - em : relative to parent element
+    - rem : root+em : relative to root element
+    - vw : viewpost width
+    - vh : viewport height
+
+    ### ```WHEN```
+    - 부모요소(parent)와 상관 있으면 `%` `em`
+    - 부모요소와 상관없이 브라우저(browser) 사이즈에 따라서 반응하려면 `v*` `rem`
+
+    - box가 요소의 높이와 너비에 따라서 변경되려면 `%` `v*`
+    - 폰트(font) 사이즈에 따라서 변경되려면 `em` `rem`
