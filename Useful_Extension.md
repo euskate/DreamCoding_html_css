@@ -16,3 +16,12 @@
 9. LIVE SERVER
 10. command palette > Markdown : Open Preview
 11. HTML to CSS autocompletion
+
+## change comment color
+
+setting > json 검색 > click ```Edit in settings.json```
+```
+    "editor.tokenColorCustomizations": {
+        "comments": "#ffc2c2"
+    }, 
+```
